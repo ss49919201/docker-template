@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.16-alpine as build
+FROM golang:1.19-alpine as build
 
 WORKDIR /app
 
@@ -11,7 +11,7 @@ COPY main.go ./
 
 RUN go build -o /hello-world
 
-FROM golang:1.16-alpine as runtime
+FROM golang:1.19-alpine as runtime
 
 WORKDIR /app
 
